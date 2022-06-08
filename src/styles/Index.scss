@@ -1,0 +1,14 @@
+///VARIABLES
+$orange: #F6851D;
+
+///FUNCTIONS
+@mixin flexBox($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+///STYLES
+.productList {
+    @include flexBox(column);
+    justify-content: center;
+}

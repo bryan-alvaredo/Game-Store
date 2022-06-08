@@ -1,0 +1,32 @@
+///VARIABLES
+$orange: #F6851D;
+
+///FUNCTIONS
+@mixin flexBox($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+///STYLES
+body {
+    padding: 0;
+    margin: 0;
+    @include flexBox(column);
+    align-items: center;
+
+    #root {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        @include flexBox(column);
+        align-items: center;
+
+        .App {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            @include flexBox(column);
+            align-items: center;
+        }
+    }
+}

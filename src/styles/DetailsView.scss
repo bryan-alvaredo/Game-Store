@@ -1,0 +1,122 @@
+///VARIABLES
+$orange: #F6851D;
+$orangePress: #db6a00;
+
+///FUNCTIONS
+@mixin flexBox($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+///STYLES
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    @include flexBox(column);
+    align-items: center;
+    width: 100%;
+
+    .banner {
+        margin: 1.2rem 0;
+        width: 100%;
+        box-shadow: 0px 0px 21px 3px #000000;
+        -webkit-box-shadow: 0px 0px 21px 3px #000000;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        padding: 0.2rem 0;
+    }
+
+    .buyProduct {
+        width: 100%;
+        @include flexBox(row);
+        justify-content: center;
+        padding: 1rem 0;
+        
+        img {
+            height: 13rem;
+            padding-right: 0.5rem;
+        }
+
+        .addProduct {
+            @include flexBox(column);
+            justify-content: space-around;
+            padding-left: 0.5rem;
+            width: 35%;
+
+            p {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            select {
+                background-color: #C4C4C4;
+                border-style: none;
+                border-radius: 0.3rem;
+                width: 5.5rem;
+                padding: 0.5rem 0.6rem;
+                font-weight: bold;
+                text-align: center;
+                align-self: center;
+                font-size: 1.2rem;
+            }
+
+            .addProductButton {
+                background-color: $orange;
+                border-style: none;
+                border-radius: 0.4rem;
+                width: 100%;
+                margin: 0.2rem 0 0.5rem 0;
+                padding: 0.5rem 0rem;
+                font-weight: bold;
+                font-size: 1rem;
+                color: white;
+
+            }.addProductButton:active {
+                background-color: $orangePress;
+            }
+        }
+    }
+
+    .infoBox {
+        @include flexBox(row);
+        padding: 1rem 0;
+        width: 100%;
+
+        .tittles, .info {
+            width: 100%;
+            align-items: center;
+
+            p {
+                text-align: center;
+                font-size: 1.15rem;
+            }
+        }
+    }
+
+    .synopsis {
+        font-size: 1.55rem;
+        padding: 1rem 0;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 1.15rem;
+        width: 90%;
+        padding: 1rem 0 2rem 0;
+    }
+
+    .backButton {
+        text-decoration: none;
+        background-color: #F6851D;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin: 2rem 0;
+    }
+}

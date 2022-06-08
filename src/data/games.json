@@ -1,0 +1,101 @@
+[
+    {
+        "id": 0,
+        "price": 2500,
+        "tittle": "Uncharted 4",
+        "platform": "Playstation 4",
+        "category": "Aventura",
+        "format": "Físico",
+        "description": "Ambientada tres años después de la conclusión de 'La traición de Drake', El desenlace del ladrón sigue a Nathan Drake, ahora un cazador de fortunas retirado, mientras se reúne con su hermano Samuel, perdido hace mucho tiempo, y busca salvarlo de un tirano despiadado al emprender otra aventura. que implica encontrar el legendario tesoro pirata legendario del capitán Henry Avery.",
+        "cover": "/img/Uncharted4Cover.jpg",
+        "banner": "/img/Uncharted4Banner.jpg"
+    },
+    {
+        "id": 1,
+        "price": 3000,
+        "tittle": "God Of War",
+        "platform": "Playstation 4",
+        "category": "Aventura",
+        "format": "Digital",
+        "description": "Octava entrega de la serie de God of War, cronológicamente, y la secuela de God of War III. La historia se centra en la mitología nórdica y Kratos regresa como el protagonista principal.",
+        "cover": "/img/GodOfWar4Cover.jpg",
+        "banner": "/img/GodOfWar4Banner.webp"
+    },
+    {
+        "id": 2,
+        "price": 2000,
+        "tittle": "Crash Bandicoot 4",
+        "platform": "Xbox One",
+        "category": "Plataformas",
+        "format": "Físico",
+        "description": "Neo Cortex y N. Tropy han vuelto a las andadas y esta vez no planean darle la tabarra al universo, ¡su objetivo es el multiverso entero! Crash y Coco tendrán que reunir cuatro máscaras cuánticas y trastocar las leyes de la realidad para salvar el mundo.",
+        "cover": "/img/Crash4Cover.jpg",
+        "banner": "/img/Crash4Banner.jpg"
+    },
+    {
+        "id": 3,
+        "price": 3500,
+        "tittle": "Mario Kart Delux 8",
+        "platform": "Nintendo Switch",
+        "category": "Carreras",
+        "format": "Físico",
+        "description": "la acción en Mario Kart 8 Deluxe se desenvuelve con mayor fluidez y, en consecuencia, con más intensidad. Y nada lo ejemplifica mejor que la recién agregada 200cc la cual, por si no lo sabes, incrementa considerablemente la velocidad de la carrera, casi como si se tratara de una grabación en cámara rápida",
+        "cover":"/img/MarioKart8DeluxeCover.jpg",
+        "banner":"/img/MarioKart8DeluxeBanner.jpg"
+    },
+    {
+        "id": 4,
+        "price": 1000,
+        "tittle": "Super Smash Bros. Brawl",
+        "platform": "Nintendo Wii",
+        "category": "Lucha",
+        "format": "Digital",
+        "description": "Super Smash Bros. Brawl es distinto a los tradicionales juegos de lucha, notándose esto particularmente en sus simples comandos de movimiento y su énfasis en sacar a los personajes de la arena de pelea más que en noquearlos.",
+        "cover": "/img/SuperSmashBrosBrawlCover.jpg",
+        "banner": "/img/SuperSmashBrosBrawlBanner.jpg"
+    },
+    {
+        "id": 5,
+        "price": 1200,
+        "tittle": "Ultimate MvsC 3",
+        "platform": "Playstation 3",
+        "category": "Lucha",
+        "format": "Digital",
+        "description": "El Doctor Doom ha congregado a los más grandes villanos del universo Marvel, y han unido fuerzas con Albert Wesker (perteneciente al universo Capcom), con el fin de juntar sus respectivos universos en un esfuerzo para conquistar ambos. Sin embargo, esta unión despierta una gran y poderosa amenaza que podría destruir ambos mundos. Esto pone en acción a los héroes de Marvel y Capcom para detener este mal antes de que sea demasiado tarde.",
+        "cover": "/img/UMvsC3Cover.jpg",
+        "banner": "/img/UMvsC3Banner.jpg"
+    },
+    {
+        "id": 6,
+        "price": 1900,
+        "tittle": "Cod Black Ops 3",
+        "platform": "PC",
+        "category": "FPS",
+        "format": "Digital",
+        "description": "40 años después de los acontecimientos en Call of Duty: Black Ops II, el mundo tiene lugar en un futuro distópico, situado en 2065, donde la ciencia y la tecnología han cambiado radicalmente a la especie humana, con la sociedad violenta y las protestas y el intento de detener el progreso de la tecnología. La tecnología militar ha avanzado hasta el punto que la robótica juega un papel principal, y se han desarrollado supersoldados. Los seres humanos están llegando al punto en el que son más máquinas que seres humanos de carne y hueso y hay muchas especulaciones sobre algún tipo de adquisición por robots. ¿Hasta dónde podremos hacer uso de la tecnología antes de que se vuelva en nuestra contra?.",
+        "cover": "/img/CodBO3Cover.jpg",
+        "banner": "/img/CoDBO3Banner.webp"
+    },
+    {
+        "id": 7,
+        "price": 5500,
+        "tittle": "Just Dance 2022",
+        "platform": "Xbox Series X",
+        "category": "Baile",
+        "format": "Físico",
+        "description": "Just Dance 2022 agrega 40 nuevas canciones donde integra éxitos y fenómenos virales de Internet, tales como » Nails, Hair, Hips, Heels» de Todrick Hall, «Believer» de Imagine Dragons, «Level Up» de Ciara, entre otros.",
+        "cover":"/img/JustDance22Cover.jpg",
+        "banner":"public/img/JustDance22Banner.webp"
+    },
+    {
+        "id": 8,
+        "price": 1600,
+        "tittle": "The Evil Within",
+        "platform": "Xbox 360",
+        "category": "Survival Horror",
+        "format": "Digital",
+        "description": "El videojuego se centra en el protagonista Sebastian Castellanos mientras es atraído por un mundo distorsionado lleno de lugares de pesadilla y criaturas horribles. Jugado en una perspectiva en tercera persona, los jugadores combaten a los enemigos desfigurados como pesadillas, incluidos los jefes, usando pistolas y armas cuerpo a cuerpo, y progresan a través de los niveles, evitando trampas, usando el sigilo y encontrando coleccionables.",
+        "cover": "/img/TheEvilWhitinCover.jpg",
+        "banner":"/img/TheEvilWhitinBanner.jpg"
+    }
+]
