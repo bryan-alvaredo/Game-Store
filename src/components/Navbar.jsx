@@ -1,11 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     return (
         <nav>
             <input type="checkbox" id="toggler" />
             <label for="toggler"><i className="fa-solid fa-bars"></i><i class="fa-solid fa-xmark"></i></label>
             <input type="text" name="search" id="search" placeholder="¿Qué estás buscando?..."/>
-            <i className="fa-solid fa-cart-shopping"></i>
+            <Link to={`/cart`}><i className="fa-solid fa-cart-shopping"></i></Link>
             <section className="menu">
                 <article className="profile">
                     <p>Juan Lopez</p>
@@ -13,7 +15,7 @@ const Navbar = () => {
                 </article>
                 <hr />
                 <ul className="menuList">
-                    <li><a href="#">Inicio</a></li>
+                    <li><Link to={`/*`}><a href="#">Inicio</a></Link></li>
                     <li><a href="#">Ofertas</a></li>
                     <li>
                         <details>

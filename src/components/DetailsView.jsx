@@ -1,46 +1,47 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import games from "../data/games.json";
+import Fade from "react-reveal/Fade";
 
-const DetailsView = () => {
+const DetailsView = ({key, game, gameCart, setGameCart}) => {
     
     const { tittle } = useParams();
 
-    const [game, setGame] = useState();
+    const [gameArt, setGameArt] = useState();
 
     useEffect(() => {
-        const gameToSet = games.find(
-            (game) => game.tittle === tittle
+        const gameArtToSet = games.find(
+            (gameArt) => gameArt.tittle === tittle
         );
 
-        setGame(gameToSet);
+        setGameArt(gameArtToSet);
     }, [tittle]);
+
+    let [count, setCount] = useState(1)
+
+    const addToCart = (gameArt) => {
+        setGameCart([...gameCart,gameArt])
+    }
 
     return (
         <main>
-            {!game ? (
+            {!gameArt ? (
                 <strong>Cargando...</strong>
             ) : (
                 <>
-                    <img className="banner" src={game.banner} alt={game.tittle}/>
-                    <h1>{game.tittle}</h1>
+                    <Fade top cascade>
+                    <img className="banner" src={gameArt.banner} alt={gameArt.tittle}/>
+                    <h1>{gameArt.tittle}</h1>
                     <section className="buyProduct">
-                        <img src={game.cover} alt={game.tittle} />
+                        <img src={gameArt.cover} alt={gameArt.tittle} />
                         <section className="addProduct">
-                            <p><strong>${game.price}</strong></p>
-                            <select className="countSelect" name="count" id="count">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
-                            <button className="addProductButton">AGREGAR <i className="fa-solid fa-cart-shopping"></i></button>
+                            <p><strong>${gameArt.price}</strong></p>
+                            <article className="countSelect">
+                                <button className="countButton" onClick={() => ((count > 1) ? setCount(count - 1) : setCount(count=1))}>-</button>
+                                <p>{count}</p>
+                                <button className="countButton" onClick={() => setCount(count + 1)}>+</button>
+                            </article>
+                            <button className="addProductButton" onClick={() => addToCart({...gameArt, compra:count})}>AGREGAR <i className="fa-solid fa-cart-shopping"></i></button>
                         </section>
                     </section>
                     <section className="infoBox">
@@ -50,15 +51,16 @@ const DetailsView = () => {
                             <p><strong>Formato</strong></p>
                         </section>
                         <section className="info">
-                            <p>{game.platform}</p>
-                            <p>{game.category}</p>
-                            <p>{game.format}</p>
+                            <p>{gameArt.platform}</p>
+                            <p>{gameArt.category}</p>
+                            <p>{gameArt.format}</p>
                         </section>
                     </section>
                     <p className="synopsis"><strong>Sinopsis</strong></p>
                     <p className="description">
-                        {game.description}
+                        {gameArt.description}
                     </p>
+                    </Fade>
                     <Link to="/" className="backButton"><i className="fa-solid fa-circle-arrow-left"></i> ATRÁS</Link>
                 </>
             )}
