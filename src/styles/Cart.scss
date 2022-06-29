@@ -1,0 +1,199 @@
+///VARIABLES
+$orange: #F6851D;
+$orangePress: #db6a00;
+$orangeHover: #ff9431;
+
+///FUNCTIONS
+@mixin flexBox($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+///STYLES
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shoppingList {
+    width: 95%;
+    @include flexBox(column);
+
+    .backButton {
+        text-decoration: none;
+        background-color: #F6851D;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin: 2rem 0;
+        max-width: 5rem;
+    }.backButton:active {
+        background-color: $orangePress;
+    }
+
+    .cartTitle {
+        text-align: center;
+        padding: 1.2rem 0;
+    }
+        
+    .mapProduct {
+        @include flexBox(row);
+        justify-content: space-between;
+        border: 2pt solid silver;
+        padding: 0.4rem;
+        border-radius: 0.4rem;
+        margin-bottom: 0.4rem;
+        
+        img {
+            width: 5rem;
+        }
+        .table {
+            @include flexBox(column);
+            justify-content: space-between;
+            width: 100%;
+
+            .info1 {
+                @include flexBox(row);
+                justify-content: space-between;
+                padding-left: 0.5rem;
+
+                article {
+                    .gameProdTitle {
+                        width: 100%;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        font-style: italic;
+                        padding-bottom: 0.4rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+                i {
+                    text-align: right;
+                }
+            }
+
+            .purchaseBuy {
+                align-self: flex-end;
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    section {
+        @include flexBox(column);
+
+        .totalPrice {
+            font-size: 1.6rem;
+            text-align: right;
+            font-style: italic;
+            padding: 1rem 0;
+    
+            span {
+                font-weight: bold;
+            }
+        }
+    
+        section {
+            @include flexBox(row);
+            width: 90%;
+            align-self: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+    
+            .backButtonLarge {
+                text-decoration: none;
+                background-color: $orange;
+                color: white;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                font-size: 0.7rem;
+                align-self: flex-end;
+            }.backButtonLarge:active {
+                background-color: $orangePress;
+            }
+    
+            .buyButton {
+                border-style: none;
+                font-weight: bold;
+                font-size: 1.1rem;
+                color: $orange;
+                background-color: white;
+                border: 2pt solid $orange;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+            }.buyButton:active {
+                color: white;
+                background-color: $orange;
+            }
+        }
+    }
+}
+
+///DESKTOP VERSION
+@media screen and (min-width: 721px) {
+    .shoppingList {
+        @include flexBox(row);
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+
+        .backButton {
+            text-decoration: none;
+            background-color: #F6851D;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }.backButton:active {
+            background-color: $orangePress;
+        }
+
+        .cartTitle {
+            width: 100%;
+            font-size: 2.3rem;
+        }
+
+        .mapProduct {
+            @include flexBox(row);
+            width: 47%;
+        }
+
+        section {
+            width: 95%;
+
+            .totalPrice {
+                font-size: 2.3rem;
+            }
+
+            section {
+                padding: 2rem 0;
+
+                .backButtonLarge {
+                    font-size: 1rem;
+                    transition: .2s;
+                }.backButtonLarge:hover {
+                    background-color: $orangeHover;
+                }.backButtonLarge:active {
+                    background-color: $orangePress;
+                }
+
+                .buyButton {
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                    transition: .2s;
+                }.buyButton:hover {
+                    color: white;
+                    background-color: $orange;
+                }.buyButton:active {
+                    background-color: $orangePress;
+                }
+            }
+        }
+    }
+}

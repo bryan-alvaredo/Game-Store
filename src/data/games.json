@@ -2,7 +2,7 @@
     {
         "id": 0,
         "price": 2500,
-        "tittle": "Uncharted 4",
+        "title": "Uncharted 4",
         "platform": "Playstation 4",
         "category": "Aventura",
         "format": "Físico",
@@ -13,7 +13,7 @@
     {
         "id": 1,
         "price": 3000,
-        "tittle": "God Of War",
+        "title": "God Of War",
         "platform": "Playstation 4",
         "category": "Aventura",
         "format": "Digital",
@@ -24,7 +24,7 @@
     {
         "id": 2,
         "price": 2000,
-        "tittle": "Crash Bandicoot 4",
+        "title": "Crash Bandicoot 4",
         "platform": "Xbox One",
         "category": "Plataformas",
         "format": "Físico",
@@ -35,7 +35,7 @@
     {
         "id": 3,
         "price": 3500,
-        "tittle": "Mario Kart Delux 8",
+        "title": "Mario Kart Delux 8",
         "platform": "Nintendo Switch",
         "category": "Carreras",
         "format": "Físico",
@@ -46,7 +46,7 @@
     {
         "id": 4,
         "price": 1000,
-        "tittle": "Super Smash Bros. Brawl",
+        "title": "Super Smash Bros.",
         "platform": "Nintendo Wii",
         "category": "Lucha",
         "format": "Digital",
@@ -57,7 +57,7 @@
     {
         "id": 5,
         "price": 1200,
-        "tittle": "Ultimate MvsC 3",
+        "title": "Ultimate MvsC 3",
         "platform": "Playstation 3",
         "category": "Lucha",
         "format": "Digital",
@@ -68,7 +68,7 @@
     {
         "id": 6,
         "price": 1900,
-        "tittle": "Cod Black Ops 3",
+        "title": "Cod Black Ops 3",
         "platform": "PC",
         "category": "FPS",
         "format": "Digital",
@@ -79,18 +79,18 @@
     {
         "id": 7,
         "price": 5500,
-        "tittle": "Just Dance 2022",
+        "title": "Just Dance 2022",
         "platform": "Xbox Series X",
         "category": "Baile",
         "format": "Físico",
         "description": "Just Dance 2022 agrega 40 nuevas canciones donde integra éxitos y fenómenos virales de Internet, tales como » Nails, Hair, Hips, Heels» de Todrick Hall, «Believer» de Imagine Dragons, «Level Up» de Ciara, entre otros.",
         "cover":"/img/JustDance22Cover.jpg",
-        "banner":"public/img/JustDance22Banner.webp"
+        "banner":"/img/JustDance22Banner.webp"
     },
     {
         "id": 8,
         "price": 1600,
-        "tittle": "The Evil Within",
+        "title": "The Evil Within",
         "platform": "Xbox 360",
         "category": "Survival Horror",
         "format": "Digital",

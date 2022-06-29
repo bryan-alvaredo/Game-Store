@@ -1,6 +1,7 @@
 ///VARIABLES
 $orange: #F6851D;
 $orangePress: #db6a00;
+$orangeHover: #ff9431;
 
 ///FUNCTIONS
 @mixin flexBox($direction) {
@@ -100,13 +101,15 @@ main {
         padding: 1rem 0;
         width: 100%;
 
-        .tittles, .info {
+        .titles, .info {
             width: 100%;
             align-items: center;
 
             p {
+                border-bottom: 1pt solid grey;
                 text-align: center;
                 font-size: 1.15rem;
+                padding-top: 0.5rem;
             }
         }
     }
@@ -118,6 +121,7 @@ main {
 
     .description {
         text-align: center;
+        font-style: italic;
         font-size: 1.15rem;
         width: 90%;
         padding: 1rem 0 2rem 0;
@@ -130,5 +134,97 @@ main {
         padding: 0.5rem;
         border-radius: 0.5rem;
         margin: 2rem 0;
+    }.backButton:active {
+        background-color: $orangePress;
+    }
+}
+
+///DESKTOP VERSION
+@media screen and (min-width: 721px) {
+    main {
+
+        .banner {
+            width: 80%;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            padding: 2rem 0;
+        }
+
+        .buyProduct {
+            max-width: 60%;
+            box-shadow: 0px 0px 21px 3px #000000;
+            -webkit-box-shadow: 0px 0px 21px 3px #000000;
+
+            img {
+                height: 15rem;
+            }
+
+            .addProduct {
+                p {
+                    font-size: 2.8rem;
+                }
+
+                .countSelect {
+                    width: 4.5rem;
+                    padding: 0.7rem 0.8rem;
+                    
+                    .countButton {
+                        font-size: 1.7rem;
+                        cursor: pointer;
+                    }
+
+                    p {
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .addProductButton {
+                    max-width: 12rem;
+                    padding: 0.8rem 0;
+                    font-size: 1.3rem;
+                    cursor: pointer;
+                    transition: .2s;
+                }
+                .addProductButton:hover {
+                    background-color: $orangeHover;
+                }.addProductButton:active {
+                    background-color: $orangePress;
+                }
+            }
+        }
+
+        .infoBox {
+            max-width: 50%;
+
+            .titles, .info {
+                
+                p {
+                    border-bottom: 1pt solid grey;
+                    font-size: 1.3rem;
+                    padding-top: 1rem;
+                }
+            }
+        }
+
+        .synopsis {
+            font-size: 2rem;
+            font-style: italic;
+        }
+
+        .description {
+            font-style: italic;
+            font-size: 1.4rem;
+        }
+
+        .backButton {
+            font-size: 1.5rem;
+            transition: .2s;
+        }.backButton:hover {
+            background-color: $orangeHover;
+        }.backButton:active {
+            background-color: $orangePress;
+        }
     }
 }

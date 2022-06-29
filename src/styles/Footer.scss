@@ -41,9 +41,30 @@ $orange: #F6851D;
         }
     }
 
-    .tittleMarkPage {
+    .titleMarkPage {
         color: white;
         font-weight: bold;
         font-size: 0.8rem;
+    }
+}
+
+///DESKTOP VERSION
+@media screen and (min-width: 721px) {
+    .footer {
+        .contact {
+            justify-content: center;
+
+            a {
+                width: 7rem;
+            }
+        }
+
+        .moreInformation {
+            justify-content: center;
+
+            a {
+                width: 13rem;
+            }
+        }
     }
 }

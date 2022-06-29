@@ -12,3 +12,6 @@ npm config set legacy-peer-deps true
 
 npm install react-reveal
 -Para animaciones y carrusel de imágenes
+
+npm install sweetalert2
+-Para modals

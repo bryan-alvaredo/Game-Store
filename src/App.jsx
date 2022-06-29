@@ -1,6 +1,7 @@
 import DetailsView from "./components/DetailsView";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PaymentForm from "./components/PaymentForm";
 import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
 import Index from "./screens/Index";
 import Cart from "./components/Cart";
@@ -15,8 +16,9 @@ function App() {
           <Navbar />
           <Switch>
               <Route path="/*" element={<Index />} />
-              <Route path="/product/:tittle" element={<DetailsView ></DetailsView>} />
+              <Route path="/product/:title" element={<DetailsView />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/paymentForm" element={<PaymentForm />}></Route>
           </Switch>
           <Footer />
         </CartProvider>

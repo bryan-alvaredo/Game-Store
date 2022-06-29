@@ -14,7 +14,7 @@ const Footer = () => {
                 <a href="#">Términos y Condiciones</a>
                 <a href="#" className="lastLink">Preguntas Frecuentes</a>
             </section>
-            <p className="tittleMarkPage">TÍTULO PÁGINA 2022</p>
+            <p className="titleMarkPage">TÍTULO PÁGINA 2022</p>
         </section>
     );
 };

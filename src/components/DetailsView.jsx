@@ -1,21 +1,24 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import games from "../data/games.json";
 import Fade from "react-reveal/Fade";
+import CartContext from "../context/CartContext";
 
-const DetailsView = ({key, game, gameCart, setGameCart}) => {
+const DetailsView = ({key, game}) => {
+
+    const {gameCart, setGameCart} = useContext(CartContext);
     
-    const { tittle } = useParams();
+    const { title } = useParams();
 
     const [gameArt, setGameArt] = useState();
 
     useEffect(() => {
         const gameArtToSet = games.find(
-            (gameArt) => gameArt.tittle === tittle
+            (gameArt) => gameArt.title === title
         );
 
         setGameArt(gameArtToSet);
-    }, [tittle]);
+    }, [title]);
 
     let [count, setCount] = useState(1)
 
@@ -29,11 +32,11 @@ const DetailsView = ({key, game, gameCart, setGameCart}) => {
                 <strong>Cargando...</strong>
             ) : (
                 <>
-                    <Fade top cascade>
-                    <img className="banner" src={gameArt.banner} alt={gameArt.tittle}/>
-                    <h1>{gameArt.tittle}</h1>
+                    <Fade top>
+                    <img className="banner" src={gameArt.banner} alt={gameArt.title}/>
+                    <h1>{gameArt.title}</h1>
                     <section className="buyProduct">
-                        <img src={gameArt.cover} alt={gameArt.tittle} />
+                        <img src={gameArt.cover} alt={gameArt.title} />
                         <section className="addProduct">
                             <p><strong>${gameArt.price}</strong></p>
                             <article className="countSelect">
@@ -41,11 +44,11 @@ const DetailsView = ({key, game, gameCart, setGameCart}) => {
                                 <p>{count}</p>
                                 <button className="countButton" onClick={() => setCount(count + 1)}>+</button>
                             </article>
-                            <button className="addProductButton" onClick={() => addToCart({...gameArt, compra:count})}>AGREGAR <i className="fa-solid fa-cart-shopping"></i></button>
+                            <button className="addProductButton" onClick={() => addToCart({...gameArt, buy:count})}>AGREGAR <i className="fa-solid fa-cart-shopping"></i></button>
                         </section>
                     </section>
                     <section className="infoBox">
-                        <section className="tittles">
+                        <section className="titles">
                             <p><strong>Plataforma</strong></p>
                             <p><strong>Categoría</strong></p>
                             <p><strong>Formato</strong></p>

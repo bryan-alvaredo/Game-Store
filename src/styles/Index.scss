@@ -12,3 +12,15 @@ $orange: #F6851D;
     @include flexBox(column);
     justify-content: center;
 }
+
+@media screen and (min-width: 721px) {
+    .productList {
+        width: 95%;
+        @include flexBox(row);
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        margin: 0 auto;
+        padding-top: 5rem;
+    }
+}

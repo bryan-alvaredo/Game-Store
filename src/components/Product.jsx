@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../context/CartContext";
 
-const Product = ({key, game}) => {
+const Product = ({game}) => {
 
-    const {gameCart, setGameCart} = useContext();
+    const {gameCart, setGameCart} = useContext(CartContext);
+    let {total, setTotal} = useContext(CartContext);
 
     const [hovereado, setHovereado] = useState(false)
     const handleHovereado = () => setHovereado(!hovereado)
@@ -18,22 +20,23 @@ const Product = ({key, game}) => {
 
     const addToCart = (game) => {
         setGameCart([...gameCart,game])
+        setTotal(total+(game.buy*game.price))
     }
 
     return (
-        <article className="productElement" id={key}>
+        <article className="productElement" id={game.key}>
             <img onClick={handleHovereado} className="flipIcon" src="./img/FlipGris.png" alt="show more icon" />
             <section className="coverAndTextForRotate">
                 <article className="container">
-                    <Link to={`/product/${game.tittle}`}>
-                        <img className={`cover  ${hovereado && "hovereado"}`} src={game.cover} alt={game.tittle} />
+                    <Link to={`/product/${game.title}`}>
+                        <img className={`cover  ${hovereado && "hovereado"}`} src={game.cover} alt={game.title} />
                     </Link>
                     <section className={`cover  ${!hovereado && "hovereado"}`}>
-                        <Link to={`/product/${game.tittle}`}>
-                            <h2 className="gameTittle">{game.tittle}</h2>
+                        <Link to={`/product/${game.title}`}>
+                            <h2 className="gameTitle">{game.title}</h2>
                         </Link>
                         <section className="information">
-                            <section className="informationTittle">
+                            <section className="informationTitle">
                                 <p><strong>Plataforma:</strong></p>
                                 <p><strong>Categoría:</strong></p>
                                 <p><strong>Formato:</strong></p>
@@ -44,7 +47,7 @@ const Product = ({key, game}) => {
                                 <p>{game.format}</p>
                             </section>
                         </section>
-                        <p className="descriptionTittle"><strong>Sinopsis:</strong></p>
+                        <p className="descriptionTitle"><strong>Sinopsis:</strong></p>
                         <p className="description">
                             {truncatedText}
                         </p>
@@ -61,7 +64,7 @@ const Product = ({key, game}) => {
                         <button className="countButton" onClick={() => setCount(count + 1)}>+</button>
                     </article>
                 </section>
-                <button onClick={() => addToCart({...game, compra:count})} className="addButton">AGREGAR <i className="fa-solid fa-cart-shopping"></i></button>
+                <button onClick={() => addToCart({...game, buy:count})} className="addButton">AGREGAR <i className="fa-solid fa-cart-shopping"></i></button>
             </section>
         </article>
     );

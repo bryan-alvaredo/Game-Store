@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <nav>
+            <img className="imgProfileDesktop" src="./img/imgProfile.png" alt="foto de perfil" />
             <input type="checkbox" id="toggler" />
-            <label for="toggler"><i className="fa-solid fa-bars"></i><i class="fa-solid fa-xmark"></i></label>
+            <label htmlFor="toggler"><i className="fa-solid fa-bars"></i><i className="fa-solid fa-xmark"></i></label>
             <input type="text" name="search" id="search" placeholder="¿Qué estás buscando?..."/>
             <Link to={`/cart`}><i className="fa-solid fa-cart-shopping"></i></Link>
             <section className="menu">
@@ -15,7 +16,7 @@ const Navbar = () => {
                 </article>
                 <hr />
                 <ul className="menuList">
-                    <li><Link to={`/*`}><a href="#">Inicio</a></Link></li>
+                    <li><Link to={`/*`}>Inicio</Link></li>
                     <li><a href="#">Ofertas</a></li>
                     <li>
                         <details>

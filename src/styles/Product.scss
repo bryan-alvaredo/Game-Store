@@ -1,6 +1,7 @@
 ///VARIABLES
 $orange: #F6851D;
 $orangePress: #db6a00;
+$orangeHover: #ff9431;
 
 
 ///FUNCTIONS
@@ -62,7 +63,7 @@ $orangePress: #db6a00;
                 @include flexBox(column);
                 justify-content: flex-start;
 
-                .gameTittle {
+                .gameTitle {
                     margin: 0;
                     padding: 0.5rem 0;
                 }
@@ -72,7 +73,7 @@ $orangePress: #db6a00;
                     width: 90%;
                     padding: 0.5rem 0 0 0;
 
-                    .informationTittle, .informationDetails {
+                    .informationTitle, .informationDetails {
                         @include flexBox(column);
                         align-items: flex-start;
                         padding: 0;
@@ -84,7 +85,7 @@ $orangePress: #db6a00;
                         }
                     }
                 }
-                .descriptionTittle {
+                .descriptionTitle {
                     align-self: flex-start;
                     padding-left: 5%;
                     padding-bottom: 0.5rem;
@@ -165,6 +166,60 @@ $orangePress: #db6a00;
 }
 
 ///DESKTOP VERSION
+@media screen and (min-width: 721px) {
+    .productElement {
+        .flipIcon {
+            display: none;
+        }
+
+        .coverAndTextForRotate {
+            width: 100%;
+            perspective: 50rem;
+    
+            .container {
+                width: 100%;
+                height: 17.5rem;
+                transform-style: preserve-3d;
+                position: relative;
+                transition: transform .75s cubic-bezier(0.4, 0.03, 0.5, 0.9);
+                
+                .cover {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    inset: 0;
+                    object-fit: cover;
+                    backface-visibility: hidden;
+                    background-color: white;
+                }
+            }
+            .cover:nth-child(2), .container:hover {
+                transform: rotate3d(0,1,0, 180deg);
+            }
+        }
+
+        section {
+            section {
+                .countSelect {
+                    .countButton {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .addButton {
+                cursor: pointer;
+                transition: .2s;
+            }
+            .addButton:hover {
+                background-color: $orangeHover;
+            }
+            .addButton:active {
+                background-color: $orangePress;
+            }
+        }
+    }
+}
 
 /*
 .coverAndTextForRotate {
